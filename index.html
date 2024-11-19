@@ -8,54 +8,109 @@
     <!-- tailwind and daisyui link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .raleway-font {
+            font-family: "Raleway", sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="navbar bg-base-100">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg>
+<body class="raleway-font">
+    <!-- navbar -->
+    <section class="max-w-[1170px] mx-auto my-5">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
                 </div>
-                <ul tabindex="0"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <a>Parent</a>
-                        <ul class="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a>Item 3</a></li>
+                <a class="btn btn-ghost text-4xl font-extrabold">P-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 font-medium text-[#030712B3]">
+                    <li><a>Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl">daisyUI</a>
+            <div class="navbar-end ">
+                <a class="btn bg-[#1DD1001A] text-[#1DD100] border-2 border-[#1DD10066]">Bus <img
+                        src="images/bus-icon.png" alt=""></a>
+            </div>
         </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li>
-                    <details>
-                        <summary>Parent</summary>
-                        <ul class="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </details>
-                </li>
-                <li><a>Item 3</a></li>
-            </ul>
+    </section>
+    <!-- banner -->
+    <section class="max-w-[1170px] mx-auto relative">
+        <div class="hero lg:h-[550px]" style="background-image: url(/images/banner.png);">
+            <div class="text-white text-center">
+                <div class="my-24 mb-36">
+                    <h1 class="mb-5 text-6xl font-extrabold">End-to-End Travel with</h1>
+                    <h1 class="mb-5 text-6xl font-extrabold text-[#1DD100]">P Paribahan</h1>
+                    <p class="mb-5 max-w-[690px]">
+                        Yes, you can run unit tests and view the results directly within the app. The integrated testing
+                        features allow for a streamlined .
+                    </p>
+                    <button class="btn bg-[#1DD100] border-none text-xl font-bold">Buy Tickets</button>
+                </div>
+            </div>
         </div>
-        <div class="navbar-end">
-            <a class="btn">Button</a>
+        <!-- cards -->
+        <div class="flex justify-center absolute -bottom-14 right-28 ">
+            <div class="flex gap-5">
+                <div>
+                    <div class="card card-side  shadow-xl lg:max-w-[308px] px-6 bg-white border-b-4 border-[#1DD100]">
+                        <figure>
+                            <img src="images/people.png" alt="Movie" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-4xl font-bold">500K+</h2>
+                            <p class="font-medium text-[#030712B3]">Registered users</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card card-side  shadow-xl lg:max-w-[308px] px-6  bg-white border-b-4 border-[#1DD100]">
+                        <figure>
+                            <img src="images/people.png" alt="Movie" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-4xl font-bold">500K+</h2>
+                            <p class="font-medium text-[#030712B3]">Registered users</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card card-side  shadow-xl lg:max-w-[308px] px-6  bg-white border-b-4 border-[#1DD100]">
+                        <figure>
+                            <img src="images/people.png" alt="Movie" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="text-4xl font-bold">500K+</h2>
+                            <p class="font-medium text-[#030712B3]">Registered users</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
