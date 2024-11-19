@@ -13,9 +13,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <style>
         .raleway-font {
             font-family: "Raleway", sans-serif;
+        }
+
+        .inter-font {
+            font-family: "Inter", sans-serif;
         }
     </style>
 </head>
@@ -58,7 +67,7 @@
         </div>
     </section>
     <!-- banner -->
-    <section class="max-w-[1170px] mx-auto relative">
+    <section class="max-w-[1170px] mx-auto relative mb-40">
         <div class="hero lg:h-[550px]" style="background-image: url(/images/banner.png);">
             <div class="text-white text-center">
                 <div class="my-24 mb-36">
@@ -112,37 +121,37 @@
         </div>
     </section>
     <!-- discount -->
-    <section>
-        <h1>Best offers for you</h1>
-        <div>
+    <section class="flex flex-col justify-center items-center max-w-[1170px] mx-auto">
+        <h1 class="text-5xl font-bold mb-10">Best offers for you</h1>
+        <div class="flex justify-between w-full ">
             <!-- card-1  -->
-            <div>
-                <div>
-                    <h1></h1>
-                    <h6></h6>
-                    <p></p>
+            <div class="flex gap-10 bg-[#FFBF0F] items-center px-10 rounded-2xl">
+                <div class="inter-font">
+                    <h1 class="text-5xl font-black">15% OFF</h1>
+                    <h6 class="font-semibold text-xl">on your next purchase</h6>
+                    <p class="text-lg font-medium text-[#03071280]">use by January 2024</p>
                 </div>
-                <img src="" alt="">
-                <div>
-                    <h1></h1>
-                    <p></p>
+                <img src="images/cupon-devider.png" alt="">
+                <div class="raleway-font">
+                    <h1 class="text-3xl font-bold">NEW15</h1>
+                    <p class="text-xl font-medium text-[#03071266]">Coupon Code</p>
                 </div>
             </div>
             <!-- card-2 -->
-            <div>
-                <div>
-                    <h1></h1>
-                    <h6></h6>
-                    <p></p>
+            <div class="flex gap-10 bg-[#F78C9C] items-center px-10 rounded-2xl">
+                <div class="inter-font">
+                    <h1 class="text-5xl font-black">20% OFF</h1>
+                    <h6 class="font-semibold text-xl">on your next purchase</h6>
+                    <p class="text-lg font-medium text-[#03071280]">use by January 2024</p>
                 </div>
-                <img src="" alt="">
-                <div>
-                    <h1></h1>
-                    <p></p>
+                <img src="images/cupon-devider.png" alt="">
+                <div class="raleway-font">
+                    <h1 class="text-3xl font-bold">Couple 20</h1>
+                    <p class="text-xl font-medium text-[#03071266]">Coupon Code</p>
                 </div>
             </div>
         </div>
-        <button>See All Offers</button>
+        <button class="border-2 border-[#1DD100] ">See All Offers</button>
     </section>
 </body>
 
