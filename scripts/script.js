@@ -5,6 +5,7 @@ function seatSelection(event) {
     let seat = event.target;
     if (seat.classList.contains('selected')) {
         seat.classList.remove('selected');
+        seat.classList.add('notselected');
         seat.classList.remove('bg-[#1DD100]');
 
         let selectedSeatNumbers = valueOfTheElement('selectedSeatNum')
@@ -14,8 +15,9 @@ function seatSelection(event) {
 
 
     } else {
-        if (seat.classList.contains('notselected')) {
+        if (seat.classList.contains('notselected') && valueOfTheElement('selectedSeatNum') < 4) {
             seat.classList.add('selected');
+            seat.classList.remove('notselected');
             seat.classList.add('bg-[#1DD100]');
 
             let selectedSeatNumbers = valueOfTheElement('selectedSeatNum')
