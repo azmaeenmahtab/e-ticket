@@ -14,6 +14,11 @@ function seatSelection(event) {
         setElementValue('selectedSeatNum', decreasedSelectedSeatNumbers)
 
 
+        let currentfareSelectedSeat = valueOfTheElement('fare-selectedSeats')
+        let newfareSelectedSeat = currentfareSelectedSeat - 1
+        setElementValue('fare-selectedSeats', newfareSelectedSeat)
+
+
     } else {
         if (seat.classList.contains('notselected') && valueOfTheElement('selectedSeatNum') < 4) {
             seat.classList.add('selected');
@@ -24,6 +29,15 @@ function seatSelection(event) {
             let increasedSelectedSeatNumbers = selectedSeatNumbers + 1;
             console.log(increasedSelectedSeatNumbers)
             setElementValue('selectedSeatNum', increasedSelectedSeatNumbers)
+
+
+            let decreasedAvailableSeat = valueOfTheElement('available-seats') - 1
+            setElementValue('available-seats', decreasedAvailableSeat)
+
+
+            let currentfareSelectedSeat = valueOfTheElement('fare-selectedSeats')
+            let newfareSelectedSeat = currentfareSelectedSeat + 1
+            setElementValue('fare-selectedSeats', newfareSelectedSeat)
         }
     }
 }
