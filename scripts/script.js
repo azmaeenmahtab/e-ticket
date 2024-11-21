@@ -7,15 +7,22 @@ function seatSelection(event) {
         seat.classList.remove('selected');
         seat.classList.remove('bg-[#1DD100]');
 
+        let selectedSeatNumbers = valueOfTheElement('selectedSeatNum')
+        let decreasedSelectedSeatNumbers = selectedSeatNumbers - 1;
+        console.log(decreasedSelectedSeatNumbers)
+        setElementValue('selectedSeatNum', decreasedSelectedSeatNumbers)
+
 
     } else {
-        seat.classList.add('selected');
-        seat.classList.add('bg-[#1DD100]');
+        if (seat.classList.contains('notselected')) {
+            seat.classList.add('selected');
+            seat.classList.add('bg-[#1DD100]');
 
-        let selectedSeatNumbers = valueOfTheElement('selectedSeatNum')
-        let newSelectedSeatNumbers = selectedSeatNumbers + 1;
-        console.log(newSelectedSeatNumbers)
-        setElementValue('selectedSeatNum', newSelectedSeatNumbers)
+            let selectedSeatNumbers = valueOfTheElement('selectedSeatNum')
+            let increasedSelectedSeatNumbers = selectedSeatNumbers + 1;
+            console.log(increasedSelectedSeatNumbers)
+            setElementValue('selectedSeatNum', increasedSelectedSeatNumbers)
+        }
     }
 }
 
