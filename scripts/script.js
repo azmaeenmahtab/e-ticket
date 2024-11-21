@@ -38,6 +38,17 @@ function seatSelection(event) {
             let currentfareSelectedSeat = valueOfTheElement('fare-selectedSeats')
             let newfareSelectedSeat = currentfareSelectedSeat + 1
             setElementValue('fare-selectedSeats', newfareSelectedSeat)
+
+
+            let parentSeatList = document.getElementById('seat-class-fare')
+            // creating the full li 
+            let li = document.createElement('li')
+            li.classList.add('flex', 'justify-between', 'text-sm', 'mb-2')
+
+            let elementText = innerTextOfTheElement(event.target.id)
+            console.log(elementText)
+            li.innerText = elementText
+            parentSeatList.appendChild(li)
         }
     }
 }

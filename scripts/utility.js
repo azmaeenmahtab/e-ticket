@@ -21,3 +21,8 @@ function addClassToElement(elementId, classname) {
 function removeClassFromElement(elementId, classname) {
     document.getElementById(elementId).classList.remove(classname)
 }
+// creating elemt
+function createElemenT(elementname) {
+    let newElement = document.createElement('elementname')
+    return newElement
+}
