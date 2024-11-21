@@ -4,13 +4,18 @@ function scrollDownToTicketBookingPage() {
 function seatSelection(event) {
     let seat = event.target;
     if (seat.classList.contains('selected')) {
-        console.log('select');
         seat.classList.remove('selected');
         seat.classList.remove('bg-[#1DD100]');
+
+
     } else {
-        console.log('notselect');
         seat.classList.add('selected');
         seat.classList.add('bg-[#1DD100]');
+
+        let selectedSeatNumbers = valueOfTheElement('selectedSeatNum')
+        let newSelectedSeatNumbers = selectedSeatNumbers + 1;
+        console.log(newSelectedSeatNumbers)
+        setElementValue('selectedSeatNum', newSelectedSeatNumbers)
     }
 }
 
