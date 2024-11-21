@@ -23,6 +23,6 @@ function removeClassFromElement(elementId, classname) {
 }
 // creating elemt
 function createElemenT(elementname) {
-    let newElement = document.createElement('elementname')
+    let newElement = document.createElement(elementname)
     return newElement
 }

@@ -19,6 +19,10 @@ function seatSelection(event) {
         setElementValue('fare-selectedSeats', newfareSelectedSeat)
 
 
+        let parentSeatList = document.getElementById('seat-class-fare')
+        parentSeatList.removeChild(li)
+
+
     } else {
         if (seat.classList.contains('notselected') && valueOfTheElement('selectedSeatNum') < 4) {
             seat.classList.add('selected');
@@ -45,9 +49,19 @@ function seatSelection(event) {
             let li = document.createElement('li')
             li.classList.add('flex', 'justify-between', 'text-sm', 'mb-2')
 
+            let span1 = createElemenT('span')
             let elementText = innerTextOfTheElement(event.target.id)
-            console.log(elementText)
-            li.innerText = elementText
+            span1.innerText = elementText
+            li.appendChild(span1)
+
+            let span2 = createElemenT('span')
+            span2.innerText = 'Economy'
+            li.appendChild(span2)
+
+            let span3 = createElemenT('span')
+            span3.innerText = 550
+            li.appendChild(span3)
+
             parentSeatList.appendChild(li)
         }
     }
