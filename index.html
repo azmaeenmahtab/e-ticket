@@ -355,7 +355,11 @@
                                 </ul>
                                 <div class="flex justify-between text-sm font-semibold border-t pt-2">
                                     <span>Total Price</span>
-                                    <span>BDT 1100</span>
+                                    <span>BDT <span id="total-price">0</span></span>
+                                </div>
+                                <div class="flex justify-between text-sm font-semibold border-t pt-2">
+                                    <span>Discounted Price</span>
+                                    <span>BDT <span id="discounted-price">0</span></span>
                                 </div>
                                 <div class="mt-4">
                                     <label class="block text-sm font-medium text-gray-600 mb-1" for="coupon">Have any
@@ -364,14 +368,15 @@
                                         <input type="text" id="coupon" placeholder="Enter coupon code"
                                             class="border rounded-l-lg px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-green-300 w-full" />
                                         <button
-                                            class="bg-green-500 text-white px-4 py-2 rounded-r-lg text-sm hover:bg-green-600">
+                                            class="bg-green-500 text-white px-4 py-2 rounded-r-lg text-sm hover:bg-green-600"
+                                            id="apply-btn" onclick="checkingCoupon()">
                                             Apply
                                         </button>
                                     </div>
                                 </div>
                                 <div class="flex justify-between text-sm font-semibold mt-4">
                                     <span>Grand Total</span>
-                                    <span>BDT 1100</span>
+                                    <span>BDT <span id="grand-total">0</span></span>
                                 </div>
                             </div>
                         </div>

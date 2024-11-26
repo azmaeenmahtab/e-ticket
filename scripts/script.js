@@ -23,6 +23,14 @@ function seatSelection(event) {
         setElementValue('available-seats', increasedAvailableSeat)
 
 
+        let previousTotal = valueOfTheElement('total-price')
+        let changedTotal = previousTotal - 550
+        setElementValue('total-price', changedTotal)
+        let grandTotal = valueOfTheElement('grand-total')
+        grandTotal = changedTotal
+        setElementValue('grand-total', grandTotal)
+
+
     } else {
         if (seat.classList.contains('notselected') && valueOfTheElement('selectedSeatNum') < 4) {
             seat.classList.add('selected');
@@ -44,29 +52,60 @@ function seatSelection(event) {
             setElementValue('fare-selectedSeats', newfareSelectedSeat)
 
 
-            let parentSeatList = document.getElementById('seat-class-fare')
-            // creating the full li 
-            let li = document.createElement('li')
-            li.classList.add('flex', 'justify-between', 'text-sm', 'mb-2')
+            // let parentSeatList = document.getElementById('seat-class-fare')
+            // // creating the full li 
+            // let li = document.createElement('li')
+            // li.classList.add('flex', 'justify-between', 'text-sm', 'mb-2')
 
-            let span1 = createElemenT('span')
-            let elementText = innerTextOfTheElement(event.target.id)
-            span1.innerText = elementText
-            li.appendChild(span1)
+            // let span1 = createElemenT('span')
+            // let elementText = innerTextOfTheElement(event.target.id)
+            // span1.innerText = elementText
+            // li.appendChild(span1)
 
-            let span2 = createElemenT('span')
-            span2.innerText = 'Economy'
-            li.appendChild(span2)
+            // let span2 = createElemenT('span')
+            // span2.innerText = 'Economy'
+            // li.appendChild(span2)
 
-            let span3 = createElemenT('span')
-            span3.innerText = 550
-            li.appendChild(span3)
+            // let span3 = createElemenT('span')
+            // span3.innerText = 550
+            // li.appendChild(span3)
 
-            document.getElementsByClassName('notselected').addEventListener('click', function () {
+            // document.getElementsByClassName('notselected').addEventListener('click', function () {
 
-            })
+            // })
+
+
+            let previousTotal = valueOfTheElement('total-price')
+            let changedTotal = previousTotal + 550
+            setElementValue('total-price', changedTotal)
+            let grandTotal = valueOfTheElement('grand-total')
+            grandTotal = changedTotal
+            setElementValue('grand-total', grandTotal)
+
         }
     }
 }
 
 document.addEventListener('mousedown', seatSelection)
+
+
+function checkingCoupon() {
+    let couponText = document.getElementById('coupon').value
+    if (couponText === 'NEW15') {
+        let changedTotal = valueOfTheElement('total-price')
+        let discountedPrice = changedTotal * .15
+        document.getElementById('discounted-price').innerText = discountedPrice
+        let grandTotal = valueOfTheElement('grand-total')
+        grandTotal = changedTotal - discountedPrice
+        setElementValue('grand-total', grandTotal)
+    }
+    else if (couponText === 'Couple 20') {
+        let changedTotal = valueOfTheElement('total-price')
+        let discountedPrice = changedTotal * .2
+        document.getElementById('discounted-price').innerText = discountedPrice
+        let grandTotal = valueOfTheElement('grand-total')
+        grandTotal = changedTotal - discountedPrice
+        setElementValue('grand-total', grandTotal)
+    }
+}
+// document.getElementById('apply-btn').addEventListener('click', checkingCoupon)
