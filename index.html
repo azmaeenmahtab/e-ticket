@@ -35,12 +35,17 @@
         .green-color {
             color: #1DD100;
         }
+
+        .disabled {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 
 <body class="raleway-font">
     <!-- navbar -->
-    <section class="max-w-[1170px] mx-auto my-5">
+    <section class="max-w-[1170px] mx-auto my-5" id="nav-page">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -76,7 +81,7 @@
         </div>
     </section>
     <!-- banner -->
-    <section class="max-w-[1170px] mx-auto relative mb-40">
+    <section class="max-w-[1170px] mx-auto relative mb-40" id="banner-page">
         <div class="hero lg:h-[550px]" style="background-image: url(/images/banner.png);">
             <div class="text-white text-center">
                 <div class="my-24 mb-36">
@@ -131,7 +136,7 @@
         </div>
     </section>
     <!-- discount -->
-    <section class="flex flex-col justify-center items-center max-w-[1170px] mx-auto">
+    <section class="flex flex-col justify-center items-center max-w-[1170px] mx-auto" id="discount-page">
         <h1 class="text-5xl font-bold mb-10">Best offers for you</h1>
         <div class="flex justify-between w-full ">
             <!-- card-1  -->
@@ -400,7 +405,8 @@
                             </div>
                         </div>
                         <button
-                            class="mt-6 w-full bg-green-500 text-white py-2 rounded-lg text-sm font-medium hover:bg-green-600">
+                            class="mt-6 w-full text-white py-2 rounded-lg text-sm font-medium hover:bg-green-600 btn-disabled bg-gray-400"
+                            onclick="showPopUp()" id="next-btn">
                             Next
                         </button>
                         <div class="flex justify-between text-sm mt-4">
@@ -411,6 +417,17 @@
                 </body>
             </div>
         </section>
+    </section>
+    <!-- last popup layout -->
+    <section class="flex justify-center bg-gray-100 px-80 py-36 hidden" id="last-popup">
+        <div class="flex flex-col gap-6 justify-center items-center w-[720px] mx-auto bg-white px-24 py-5 rounded-xl">
+            <img src="images/success.png" alt="" class="w-[100px]">
+            <h1 class="text-2xl font-bold text-[#20AE5C]">SUCCESS</h1>
+            <h1 class="text-center text-xl font-bold gray-text">Thank you for Booking Our Bus Seats.
+                We are working hard to find the best service and deals for you.</h1>
+            <p class="gray-text">Shortly you will find a confirmation in your email.</p>
+            <button class="btn bg-[#20AE5C] text-white">Continue</button>
+        </div>
     </section>
     <script src="scripts/script.js"></script>
     <script src="scripts/utility.js"></script>

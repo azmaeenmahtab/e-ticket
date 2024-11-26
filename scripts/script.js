@@ -52,29 +52,6 @@ function seatSelection(event) {
             setElementValue('fare-selectedSeats', newfareSelectedSeat)
 
 
-            // let parentSeatList = document.getElementById('seat-class-fare')
-            // // creating the full li 
-            // let li = document.createElement('li')
-            // li.classList.add('flex', 'justify-between', 'text-sm', 'mb-2')
-
-            // let span1 = createElemenT('span')
-            // let elementText = innerTextOfTheElement(event.target.id)
-            // span1.innerText = elementText
-            // li.appendChild(span1)
-
-            // let span2 = createElemenT('span')
-            // span2.innerText = 'Economy'
-            // li.appendChild(span2)
-
-            // let span3 = createElemenT('span')
-            // span3.innerText = 550
-            // li.appendChild(span3)
-
-            // document.getElementsByClassName('notselected').addEventListener('click', function () {
-
-            // })
-
-
             let previousTotal = valueOfTheElement('total-price')
             let changedTotal = previousTotal + 550
             setElementValue('total-price', changedTotal)
@@ -108,4 +85,29 @@ function checkingCoupon() {
         setElementValue('grand-total', grandTotal)
     }
 }
-// document.getElementById('apply-btn').addEventListener('click', checkingCoupon)
+
+
+// getting input fields
+let nameInput = document.getElementById('name')
+let phoneInput = document.getElementById('phone')
+let emailInput = document.getElementById('email')
+// adding eventlistener to the input fields
+nameInput.addEventListener('input', checkField)
+phoneInput.addEventListener('input', checkField)
+emailInput.addEventListener('input', checkField)
+
+function checkField() {
+    if (document.getElementById('name').value.trim() !== '' && document.getElementById('phone').value.trim() !== '' && document.getElementById('email').value.trim() !== '') {
+        document.getElementById('next-btn').classList.remove('btn-disabled')
+    }
+}
+
+
+
+function showPopUp() {
+    document.getElementById('last-popup').classList.remove('hidden')
+    document.getElementById('ticket-booking-page').classList.add('hidden')
+    document.getElementById('discount-page').classList.add('hidden')
+    document.getElementById('banner-page').classList.add('hidden')
+    document.getElementById('nav-page').classList.add('hidden')
+}
