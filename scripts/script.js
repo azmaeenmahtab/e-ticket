@@ -99,6 +99,7 @@ emailInput.addEventListener('input', checkField)
 function checkField() {
     if (document.getElementById('name').value.trim() !== '' && document.getElementById('phone').value.trim() !== '' && document.getElementById('email').value.trim() !== '') {
         document.getElementById('next-btn').classList.remove('btn-disabled')
+        document.getElementById('next-btn').classList.add('bg-green-500')
     }
 }
 
